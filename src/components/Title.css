@@ -1,0 +1,95 @@
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4rem 6vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fdfdfd; /* fallback */
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Optional: add a dark overlay for readability */
+.title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.title-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 800px;
+  z-index: 1;
+  color: white;
+  text-align: left; 
+  align-items: flex-start; 
+  margin-left: 0;   
+  padding-left: 6vw;
+}
+
+.title-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  color:white;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.3;
+
+}
+
+.title-text p {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.title-text button {
+  background: transparent;
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border: 2px solid white;
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px); /* optional glow/glass look */
+}
+
+.title-text button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Remove video/image container */
+.title-image {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    flex-direction: column;
+    padding: 2rem 5vw;
+  }
+
+  .title-text {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .title-text button {
+    display: block;
+    margin-top: 1.5rem;
+  }
+}

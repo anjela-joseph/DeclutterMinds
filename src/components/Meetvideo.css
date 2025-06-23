@@ -1,0 +1,52 @@
+/* === Meet the Coach Section === */
+.instructor {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f9fdfb;
+}
+
+.instructor h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #2f6f4e;
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* === Video Container === */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 21 / 9;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .instructor {
+    padding: 60px 15px;
+  }
+
+  .instructor h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .video-container {
+    padding: 0;
+  }
+
+  .video-container video {
+    max-width: 100%;
+    aspect-ratio: 16 / 9; /* better for small screens */
+  }
+}

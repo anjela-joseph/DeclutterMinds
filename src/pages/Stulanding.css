@@ -1,0 +1,391 @@
+@import '../styles/theme.css';
+
+/* General Page Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.student-landing {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.student-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.student-text h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  max-width: 500px;
+  font-family: "Inter", sans-serif;
+}
+
+.student-info {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.student-info p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.student-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-enroll {
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--pill-radius);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  transition: all var(--transition-duration) ease;
+}
+
+/* Video Placeholder */
+.student-video {
+  display: flex;
+  justify-content: center;
+}
+
+.video-placeholder {
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 1.2rem;
+  margin-bottom: 5rem;
+}
+
+/* Benefit Timeline Section */
+.benefit-timeline {
+  background-color: #e8f9f4;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.benefit-timeline h2 {
+  font-size: 2rem;
+  color: #2f6f4e;
+  font-weight: 1000;
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px solid #3d7894;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.checkmark {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #3d7894;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -17px;
+  top: 0;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.step .text {
+  padding-left: 2.5rem;
+  text-align: left;
+}
+
+.step h4 {
+  color: #2f6f4e;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.step p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .student-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .student-text h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .student-info p {
+    text-align: center;
+  }
+
+  .student-buttons {
+    justify-content: center;
+  }
+
+  .video-placeholder {
+    height: 250px;
+    font-size: 1rem;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quiz-button {
+    width: 90%;
+    margin: 0.5rem 0;
+  }
+}
+
+
+.clarity-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 13rem 11rem;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  min-height: 100vh;
+  color: white;
+}
+
+.clarity-overlay {
+  max-width: 750px;
+  text-align: left;
+}
+
+.clarity-overlay h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.5;
+  font-family: 'Georgia', serif;
+  margin-bottom: 2rem;
+  color:white;
+}
+
+.clarity-overlay p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  font-family: 'Georgia', serif;
+  color: white;
+}
+
+.clarity-btn {
+  background: transparent;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: 2px solid white;
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px); /* optional glow/glass look */
+}
+
+.clarity-btn:hover {
+  background: white;
+  color: #222;
+}
+
+
+
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 8vw;
+  background-size: cover;         /* makes sure it fills */
+  background-position: center;    /* centers the image */
+  background-repeat: no-repeat;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 2.3rem;
+  color:white;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background: transparent;
+  color: white;
+  font-weight: 300;
+  font-size: 1.3rem;
+  border: 2px solid white;
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  font-weight: 300;
+  font-size: 1.3rem;
+  border: 2px solid white;
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.btn-outline:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.wellness-section {
+  padding: 4rem 6vw;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+}
+
+.section-title {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color:black;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1rem;
+  max-width: 900px;
+}
+
+.wellness-section h2{
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+
+.wellness-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.wellness-block h3 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-top:2rem;
+  margin-bottom: 0.5rem;
+}
+
+.wellness-block p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.learn-more-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 2px solid #333;
+  padding-bottom: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.learn-more-link:hover {
+  color: #000;
+  border-color: #000;
+}

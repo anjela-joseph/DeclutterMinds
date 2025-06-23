@@ -1,0 +1,160 @@
+.scroll-section {
+  display: flex;
+  gap: 4rem;
+  padding: 4rem 6vw;
+  align-items: flex-start;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.scroll-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scroll-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+  font-weight: 100;
+  color: #2f6f4e;
+}
+
+.scroll-text p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-family: "Cormorant Garamond", serif;
+  color: #333;
+}
+.scroll-text pb {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-weight:550;
+  font-family: "Cormorant Garamond", serif;
+  color: #333;
+}
+
+
+.scroll-text button {
+  display: inline-block; 
+  width: fit-content !important;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: center;
+  white-space:nowrap;
+  transition: all 0.3s ease;
+}
+.button-wrapper {
+  text-align: left;        
+}
+.scroll-text button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-gallery {
+  display: flex;
+  gap: 2rem;
+  height: 400px;
+  overflow: hidden;
+  flex: 1;
+  min-width: 280px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: scrollUp 10s linear infinite;
+}
+.column.staggered {
+  margin-top: 3rem; /* adjust this value for more/less stagger */
+}
+.column img {
+  width: 275px;
+  height: 325px;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Scroll animation */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+  .scroll-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 5vw;
+  }
+
+  .scroll-text {
+    text-align: center;
+  }
+
+  .scroll-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .scroll-text p {
+    font-size: 1.1rem;
+  }
+
+  .scroll-gallery {
+    flex-direction: row;
+    justify-content: center;
+    height: 300px;
+  }
+
+  .column img {
+    width: 180px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .scroll-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .scroll-text p {
+    font-size: 1rem;
+  }
+
+  .scroll-text button {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .scroll-gallery {
+    height: 250px;
+    gap: 1rem;
+  }
+
+  .column img {
+    width: 150px;
+    height: 180px;
+  }
+}

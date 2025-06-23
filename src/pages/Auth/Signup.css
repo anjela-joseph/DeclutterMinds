@@ -1,0 +1,200 @@
+.signup-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-image: url('../../assets/signinbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+    gap: 4rem;
+}
+.signup-content-left {
+    flex: 1;
+    max-width: 500px;
+    color: var(--text-color);
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.signup-content-left h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+}
+
+.short-description {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.illustration-container {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.illustration-container:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+.signup-illustration {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(10%);
+    transition: filter 0.3s ease-in-out, transform 0.5s ease-in-out;
+    animation: slideIn 1s ease-out forwards;
+}
+
+.illustration-container:hover .signup-illustration {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signup-form-right {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-container h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.form-group {
+    margin-bottom: 0.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.form-group select {
+width: 100%;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--accent-light);
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    height: 2rem;
+}
+
+.form-group select:focus {
+ outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--accent-light);
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    height: 2rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.auth-form .btn-primary {
+    width: 100%;
+    padding: 0.45rem;
+    font-size: 0.9rem;
+    height: 2rem;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 0.6rem;
+    color: var(--text-color);
+    font-size: 0.85rem;
+}
+
+.text-primary {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.text-primary:hover {
+    color: var(--secondary-color);
+}
+.signin-container {
+    height: calc(100vh - 65px);
+    margin-top: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem; /* ✅ Added space between form and illustration */
+    padding: 2rem 2rem; /* ✅ Increased overall padding */
+    background-color: var(--background-color);
+    background-image: linear-gradient(135deg, var(--accent-light) 0%, var(--background-color) 100%);
+}
+.signup-form-right {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;  
+}
+
+.signup-page {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* full height */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

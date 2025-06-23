@@ -1,0 +1,93 @@
+.courses-section {
+  padding: 0rem 0vw;
+  background-color: white;
+}
+
+.courses-heading {
+  font-size: 3rem;
+  color: #2f6f4e;
+  margin-bottom: 10rem;
+  font-weight: 300;
+}
+
+.courses-layout {
+  display: flex;
+  position: relative;
+}
+
+/* Left scrollable column */
+.left-scrollable {
+  width: 50%;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  scroll-snap-type: y mandatory;
+}
+
+.course-card {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.course-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 550;
+  color: #2f6f4e;
+}
+
+.course-card p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  white-space: pre-line;
+  color: #333;
+}
+
+.course-card pb {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  font-weight: 550;
+  white-space: pre-line;
+  color: black;
+}
+
+/* Optional: stylized label bar */
+.label-bar {
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: #d9f3eb;
+  color: #2f6f4e;
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Right sticky image */
+.right-fixed {
+  position: sticky;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  overflow:hidden;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;        
+  margin-right:0rem;        
+  background: none;
+}
+
+.background-image {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display:block;
+  margin-top:0rem;
+}

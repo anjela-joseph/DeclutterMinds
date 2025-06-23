@@ -1,0 +1,194 @@
+/* === SECTION CONTAINER === */
+.courses-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: white;
+}
+
+/* === HEADING === */
+.course-heading {
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 5rem 1rem;
+  color: #000;
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* === GRID LAYOUT === */
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  gap: 2rem;
+}
+
+/* === COURSE CARD === */
+.course-card {
+  background-color: #ffffff;
+  max-width: 800px;
+  width: 100%;
+  padding: 6rem;
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* === ICON AND TITLE === */
+.student-title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  width:fit-content;
+}
+
+.course-icon {
+  font-size: 6rem;
+  color: #2f6f4e;
+  margin-bottom: 1rem;
+  align-items:left;
+}
+
+.label-bar {
+  display: inline-block !important ;
+  padding: 0.3rem 0;   
+  border-top: 2px solid #2f6f4e;
+  font-weight: bold;
+  color: #2f6f4e;
+  font-size: 1rem;
+}
+
+/* === TEXT === */
+.course-card h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 2rem 0rem;
+  color: #000;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.4;
+}
+
+.course-card p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* === CTA LINK === */
+.learn-more {
+  background: white;
+  color: #2F6F4E;
+  font-weight: 600;
+  font-size: 1.1rem;
+  width: fit-content !important;
+  border: 2px solid#2F6F4E;
+  border-radius: var(--pill-radius);
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  transition: all var(--transition-duration) ease;
+  text-decoration: none;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+/* === RESPONSIVE STYLING === */
+@media (max-width: 1024px) {
+  .courses-heading {
+    font-size: 2.2rem;
+  }
+
+  .course-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .courses-heading {
+    font-size: 1.9rem;
+  }
+
+  .course-icon {
+    font-size: 3rem;
+  }
+
+  .course-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .course-card p {
+    font-size: 1rem;
+  }
+
+  .learn-more {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .courses-layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-scrollable,
+  .right-fixed {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .background-video {
+    height: auto;
+    max-height: 300px; /* optional cap for mobile */
+    border-radius: 0;
+  }
+
+  .course-card {
+    padding: 2rem; /* smaller padding for mobile */
+  }
+}
+
+
+.courses-layout {
+  display: flex;
+  gap:0;
+  align-items: flex-start;
+}
+
+.left-scrollable {
+  flex: 1;
+  width: 50%;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.right-fixed {
+  width: 45%;
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+}
+
+.background-video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
