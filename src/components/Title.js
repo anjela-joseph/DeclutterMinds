@@ -1,6 +1,6 @@
 import React from 'react';
 import './Title.css';
-import bgImage from '../assets/Titlebg.png'; 
+import bgImage from '../assets/homebg2.jpg'; 
 import { Link } from "react-router-dom";
 
 const Title = () => {

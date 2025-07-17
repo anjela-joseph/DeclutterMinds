@@ -27,7 +27,7 @@ const studentFaqData = [
     answer: "Not at all. These tools are designed to fit into your existing day — whether it’s a quick reset between meetings or a reflection at lunch."
   },
   {
-    question: "7. I’ve been feeling disconnected for a while. Is it too late to reset?",
+    question: "I’ve been feeling disconnected for a while. Is it too late to reset?",
     answer: "Not at all. No matter how long you’ve felt off, your system knows how to find its rhythm again. This course is a gentle way to reconnect — without needing to start over."
   },
 ];

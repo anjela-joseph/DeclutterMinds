@@ -4,7 +4,7 @@ import "./Emplanding.css";
 import vid from '../assets/freqvid.mp4'; 
 import { Link } from "react-router-dom";
 import empland from '../assets/empland.png';
-import bgImage from '../assets/emplandcopy.png'; 
+import bgImage from '../assets/empland.png'; 
 import StudentFAQ from '../components/EmployeeFAQ';
 
 

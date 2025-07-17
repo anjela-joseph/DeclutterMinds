@@ -1,7 +1,7 @@
 import React from 'react';
 import './CoursesSection.css';
 import { FaUserGraduate, FaUsers, FaChalkboardTeacher } from 'react-icons/fa';
-import titlevid from '../assets/wave.mp4';
+import titlevid from '../assets/freqvid.mp4';
 
 const CoursesSection = () => {
   return (

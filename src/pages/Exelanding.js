@@ -3,8 +3,8 @@ import Navbar from "../components/Navbar";
 import "./Exelanding.css";
 import vid from '../assets/freqvid.mp4'; 
 import { Link } from "react-router-dom";
-import exeland from '../assets/exeland.png';
-import bgImage from '../assets/exelandcopy.png'; 
+import exeland from '../assets/homebg.jpg';
+import bgImage from '../assets/homebg.jpg'; 
 
 
 

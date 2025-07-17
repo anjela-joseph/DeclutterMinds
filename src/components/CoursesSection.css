@@ -51,7 +51,7 @@
 
 .course-icon {
   font-size: 6rem;
-  color: #2f6f4e;
+  color: black;
   margin-bottom: 1rem;
   align-items:left;
 }
@@ -59,9 +59,9 @@
 .label-bar {
   display: inline-block !important ;
   padding: 0.3rem 0;   
-  border-top: 2px solid #2f6f4e;
+  border-top: 2px solid black;
   font-weight: bold;
-  color: #2f6f4e;
+  color: black;
   font-size: 1rem;
 }
 
@@ -87,11 +87,11 @@
 /* === CTA LINK === */
 .learn-more {
   background: white;
-  color: #2F6F4E;
+  color: black;
   font-weight: 600;
   font-size: 1.1rem;
   width: fit-content !important;
-  border: 2px solid#2F6F4E;
+  border: 2px solid black;
   border-radius: var(--pill-radius);
   padding: 0.75rem 2rem;
   cursor: pointer;
