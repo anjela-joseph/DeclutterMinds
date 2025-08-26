@@ -69,6 +69,14 @@ const Quiz = () => {
   return (
     <>
       <Navbar />
+      <div className="progress-bar">
+  {questions.map((_, index) => (
+    <span
+      key={index}
+      className={`progress-step ${index <= current ? "active" : ""}`}
+    ></span>
+  ))}
+</div>
       <div className="container">
         <h1 className="heading">Alignment Quiz</h1>
 

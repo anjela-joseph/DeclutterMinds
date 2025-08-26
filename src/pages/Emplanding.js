@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import "./Emplanding.css";
-import vid from '../assets/freqvid.mp4'; 
 import { Link } from "react-router-dom";
 import empland from '../assets/empland.png';
 import bgImage from '../assets/empland.png'; 
@@ -43,108 +42,105 @@ Take this 30-second quiz to check if your brain, heart, and gut are out of sync.
 
 
 
-<>
-          <section className="courses-section">
-          
-                <div className="courses-layout">
-                  {/* Left scrollable content */}
-                  <div className="left-scrollable">
-                    <div className="course-card">
-                      <div className="student-title-block">
-                      </div>
-                      <h3> Here’s what no one’s saying out loud — but you feel it every day.</h3>
-                      <p>You wake up tired and go to bed feeling even more tired.<br />
-Your back hurts, your eyes sting, and your shoulders feel heavy.<br />
-You drink coffee to stay awake, but you still feel worn out by the end of the day.<br />
-You keep working, going to meetings, and ticking off tasks — pretending everything’s fine.<br />
-But your body is trying to tell you something, and you’re not listening.<br />
-You’re not lazy — you’re just drained.<br />
-What you need isn’t more effort, it’s real rest. <br />
- Don’t you want to feel light, clear, and like yourself again?
- </p>
-          <pb>Yes, I’m done feeling heavy
-          </pb>
-                      
-                    </div>
-          
-                    <div className="course-card">
-                      <div className="student-title-block">
-                        
-                      </div>
-                      <h3>Here’s what no one’s saying out loud — but you feel it every day.</h3>
-                      <p>You wake up tired and go to bed feeling even more tired.<br />
-Your back hurts, your eyes sting, and your shoulders feel heavy.<br/>
-You drink coffee to stay awake, but you still feel worn out by the end of the day.<br/>
-You keep working, going to meetings, and ticking off tasks — pretending everything’s fine.<br/>
-But your body is trying to tell you something, and you’re not listening.<br/>
-You’re not lazy — you’re just drained.<br/>
-What you need isn’t more effort, it’s real rest.<br/>
- Don’t you want to feel light, clear, and like yourself again?
- </p>
-          <pb>Yes, I’m done feeling heavy
-          </pb>
-                      
-                    </div>
-          
-                    <div className="course-card">
-                      <div className="student-title-block">
-                        
-                      
-                      </div>
-                      <h3>Here’s what no one’s saying out loud — but you feel it every day.</h3>
-                      <p>You don’t feel joy like you used to.<br/>
-Even the small things that once made you smile now barely register.<br/>
-You do what you need to do each day, but something feels missing.<br/>
-Your emotions feel dull, like you’re just getting through the day.<br/>
-You say you’re “fine,” but deep down, you feel a little empty.<br/>
-You miss the version of you that used to care.<br/>
-The version that felt something.<br/>
-This isn’t your fault — you’ve been in survival mode for too long<br/>
-Don’t you want to feel truly alive again?
- </p>
-          <pb>Yes, I’m done feeling numb 
-          
-          </pb>
-                      
-                    </div>
-                    <div className="course-card">
-                      <div className="student-title-block">
-                        
-                      
-                      </div>
-                      <h3>Here’s what no one’s saying out loud — but you feel it every day.</h3>
-                      <p>You do your job. You hit the targets. You perform.<br/>
-But it all feels like a loop — same week, same year, same you.<br/>
-You want growth. You crave progress.<br/>
-But deep down, you feel stuck. Like life is moving around you, not with you.<br/>
-You’ve outgrown this version of yourself — but don’t know how to move forward.<br/>
-You’re not unmotivated — you’re unchallenged, uninspired, and still discovering your purpose.<br/>
-Don’t you want to feel like you’re becoming something again?
+<section className="how-it-works">
 
- </p>
-          <pb> Yes, I’m done staying stuck 
-          
-          </pb>
-                      
-                    </div>
-                  </div>
-          
-                  
-                  <div className="right-fixed">
-        <video
-          src={vid}
-            autoPlay
-                  loop
-                  muted
-          alt="Instructor"
-          className="background-image"
-        />
-      </div>
-      
-                </div>
-              </section>
-      
-</>
+{/* Step 1 */}
+<div className="step">
+  <div className="images">
+    <img src="/images/woman.jpg" alt="Therapist 1" />
+  </div>
+
+  <div className="text">
+<div className="how-it-works-wrapper">
+  <h2 className="how-it-works-title-emp">Here’s what no one’s saying out loud — but you feel it every day.</h2>
+
+    <p>
+      You wake up tired and go to bed feeling even more tired. Your back hurts, 
+      your eyes sting, and your shoulders feel heavy.
+    </p>
+    <p>
+      You drink coffee to stay awake, but you still feel worn out by the end of 
+      the day. You keep working, going to meetings, and ticking off tasks — 
+      pretending everything’s fine.
+    </p>
+    <p>
+      But your body is trying to tell you something, and you’re not listening. 
+      You’re not lazy — you’re just drained.
+    </p>
+    <p>
+      What you need isn’t more effort, it’s real rest. Don’t you want to feel 
+      light, clear, and like yourself again?
+    </p>
+
+    <p className="cta-text">
+      <strong>Yes, I’m done feeling heavy</strong>
+    </p>
+  </div>
+</div>
+</div>
+
+      <div className="arrow">↓</div>
+
+{/* Step 2 */}
+<div className="step">
+  <div className="images">
+    <img src="/images/man-laptop.jpg" alt="Person on Laptop" />
+  </div>
+
+  <div className="text">
+    <p>
+      You wake up tired and go to bed feeling even more tired. Your back hurts, 
+      your eyes sting, and your shoulders feel heavy.
+    </p>
+    <p>
+      You drink coffee to stay awake, but you still feel worn out by the end of 
+      the day. You keep working, going to meetings, and ticking off tasks — 
+      pretending everything’s fine.
+    </p>
+    <p>
+      But your body is trying to tell you something, and you’re not listening. 
+      You’re not lazy — you’re just drained.
+    </p>
+    <p>
+      What you need isn’t more effort, it’s real rest. Don’t you want to feel 
+      light, clear, and like yourself again?
+    </p>
+
+    <p className="cta-text"><strong>Yes, I’m done feeling heavy</strong></p>
+  </div>
+</div>
+
+<div className="arrow">↓</div>
+
+{/* Step 3 */}
+<div className="step">
+  <div className="images">
+    <img src="/images/woman.jpg" alt="Therapist 1" />
+  </div>
+
+  <div className="text">
+    <p>
+      You don’t feel joy like you used to. Even the small things that once made 
+      you smile now barely register.
+    </p>
+    <p>
+      You do what you need to do each day, but something feels missing. Your 
+      emotions feel dull, like you’re just getting through the day.
+    </p>
+    <p>
+      You say you’re “fine,” but deep down, you feel a little empty. You miss 
+      the version of you that used to care — the version that felt something.
+    </p>
+    <p>
+      This isn’t your fault — you’ve been in survival mode for too long. Don’t 
+      you want to feel truly alive again?
+    </p>
+
+    <p className="cta-text"><strong>Yes, I’m done feeling numb</strong></p>
+  </div>
+</div>
+
+    </section>
 
 
 

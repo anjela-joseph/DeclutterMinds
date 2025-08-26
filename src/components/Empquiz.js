@@ -1,5 +1,6 @@
-// src/pages/Quiz.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import Navbar from '../components/Navbar'; // ✅ Reusable navbar
 import '../pages/Quiz.css'; // Use this or App.css for styling
 
@@ -14,7 +15,11 @@ const questions = [
 const EmpQuiz = () => {
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState([]);
-  const [showResult, setShowResult] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isSending, setIsSending] = useState(false);
+  const navigate = useNavigate();
 
   const handleAnswer = (response) => {
     const updatedAnswers = [...answers, response];
@@ -23,13 +28,14 @@ const EmpQuiz = () => {
     if (current < questions.length - 1) {
       setCurrent(current + 1);
     } else {
-      setShowResult(true);
+    setShowLogin(true);
     }
   };
 
-  const yesCount = answers.filter(ans => ans === 'yes').length;
+  
 
-  const getMessage = () => {
+  const generateResultMessage  = () => {
+    const yesCount = answers.filter(ans => ans === 'yes').length;
     if (yesCount <= 2) {
       return "You're beginning to notice the misalignment. This is a critical moment to pause, reflect, and explore where your path is truly taking you.";
     } else if (yesCount <= 4) {
@@ -39,27 +45,100 @@ const EmpQuiz = () => {
     }
   };
 
+      const handleLoginAndSend = async () => {
+    try {
+      setIsSending(true);
+
+      const res = await axios.post('http://127.0.0.1:8000/api/token/', { email, password });
+      const token = res.data.access;
+
+      const message = generateResultMessage();
+
+      await axios.post('http://127.0.0.1:8000/api/send-quiz-email/', { message }, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+
+      alert("✅ Your quiz result has been sent to your email!");
+      setShowLogin(false);
+      navigate('/course-page');
+    } catch (err) {
+      console.error(err);
+      alert("❌ Login failed or email not sent. Please check your credentials.");
+    } finally {
+      setIsSending(false);
+    }
+  };
+
   return (
     <>
       <Navbar />
+      <div className="progress-bar">
+  {questions.map((_, index) => (
+    <span
+      key={index}
+      className={`progress-step ${index <= current ? "active" : ""}`}
+    ></span>
+  ))}
+</div>
 
       <div className="container">
         <h1 className="heading">Alignment Quiz</h1>
 
-        {!showResult ? (
+         {/* Quiz Questions */}
+        {current < questions.length && (
           <div className="quiz-box">
-            <h2 className="subheading">Question {current + 1} of {questions.length}</h2>
-            <p className="question">{questions[current]}</p>
+            <h2>Question {current + 1} of {questions.length}</h2>
+            <p>{questions[current]}</p>
             <div className="button-group">
-              <button className="answer-btn" onClick={() => handleAnswer('yes')}>Yes</button>
-              <button className="answer-btn" onClick={() => handleAnswer('no')}>No</button>
+              <button onClick={() => handleAnswer('yes')}>Yes</button>
+              <button onClick={() => handleAnswer('no')}>No</button>
             </div>
           </div>
-        ) : (
-          <div className="result-box">
-            <h2 className="section-title">Your Results</h2>
-            <p>{getMessage()}</p>
-            <a href="/course-page" className="login-btn">Try the Demo Now</a>
+        )}
+
+        {/* Login to receive result */}
+        {showLogin && (
+          <div className="login-modal">
+            <h3>Login to get your result via email</h3>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+            />
+            <button onClick={handleLoginAndSend} disabled={isSending}>
+              {isSending ? 'Sending...' : 'Submit'}
+            </button>
+            <p>
+              Don't have an account?{' '}
+              <button
+                className="text-link"
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: '#007bff',
+                  cursor: 'pointer',
+                  padding: 0,
+                  fontSize: 'inherit'
+                }}
+                onClick={() =>
+                  navigate('/signup', {
+                    state: {
+                      fromQuiz: true,
+                      answers: answers
+                    }
+                  })
+                }
+              >
+                Create one
+              </button>
+            </p>
           </div>
         )}
       </div>

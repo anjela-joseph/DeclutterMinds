@@ -192,3 +192,72 @@
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
+
+
+.therapists-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 80px;
+  background-color: white;
+}
+
+.therapists-text {
+  flex: 1;
+  max-width: 750px;
+  margin-left: 100px;
+  margin-right: 200px;
+  margin-bottom: 100px;
+}
+
+.therapists-text h2 {
+  font-size: 2.7rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.therapists-text p {
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.therapists-text button {
+  background-color: #3fb67f;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Therapist image container */
+.therapist-image {
+  display: flex;
+  flex: 1;
+  justify-content: center;   /* centers image horizontally */
+  align-items: center;       /* centers image vertically if needed */
+  margin: 20px 0;
+}
+
+/* Therapist image styling */
+.therapist-image img {
+  width: 320px;              /* adjust size as needed */
+  max-width: 100%;           /* responsive */
+  border-radius: 16px;       /* rounded corners */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  object-fit: cover;         /* keeps aspect ratio */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.therapist-image img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
